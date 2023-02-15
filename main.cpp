@@ -32,6 +32,8 @@ void Processing_message(std::string& in_strmessage)
 int temp = 89;
 std::string s = "a string";
 
+
+
 int main()
 {
     int rc;
