@@ -1,7 +1,6 @@
 #include "crow.h"
 #include <string>
 #include <iostream>
-#include <crow.h>
 #include "mqtt.h"
 
 
@@ -28,11 +27,6 @@ void Processing_message(std::string& in_strmessage)
 {
     std::cout << in_strmessage;
 }
-
-int temp = 89;
-std::string s = "a string";
-
-
 
 int main()
 {
@@ -71,19 +65,16 @@ int main()
     }
 
         crow::json::wvalue x({{"temperature", std::stof( message_received )/1000}});
-        x["status"] = s;
+        if (std::stof( message_received )/1000 > 50)
+        {
+            x["status"] = "start_cooling";
+        }
+        else
+        {
+            x["status"] = "start_heating";
+        }
+        
         return x;
     });
     app.port(4000).run();
 }
-
-
-
-
-// int main()
-// {
-
-
-
-// }
-
