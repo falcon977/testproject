@@ -4,6 +4,7 @@ The project contains two major parts. The first one, located in the directory na
 The temperature data, whenever captured, is directly sent to another application using MQTT protocol, by publishing the value to a topic within Hivemq broker.
 
 I used the following tools to develop this project : 
+
 Hardware equipments : 
 - L298N 
 - Fan
