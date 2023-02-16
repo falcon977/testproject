@@ -5,7 +5,7 @@
 #include <string.h>
 
 
-int PIN = 12;
+int PIN = 26;
 //--------------------------------------------------------------------
 void setup_custom(int PIN)
 {
@@ -18,7 +18,7 @@ void setup_custom(int PIN)
 void action_pwm(int pwm_value)
 {
 	if ((pwm_value>0)&&(pwm_value<256))
-		{pwmWrite(12, pwm_value);}
+		{pwmWrite(26, pwm_value);}
 }
 //----------------------------------------------------------------
 void Conc(int message) 
