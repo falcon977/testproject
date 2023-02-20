@@ -1,4 +1,4 @@
-#include "crow.h"
+#include "include/crow_all.h"
 #include <string>
 #include <iostream>
 #include "mqtt.h"
@@ -34,7 +34,7 @@ int main()
     std::cout << "connecting to broker\n";
     iot_client = new mqtt_client(CLIENT_ID, BROKER_ADDRESS, MQTT_PORT);
     crow::SimpleApp app;
-    CROW_ROUTE(app, "/temperature")
+    CROW_ROUTE(app, "/")
     ([&]{
 
     do {
